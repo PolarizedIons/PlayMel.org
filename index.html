@@ -86,10 +86,7 @@
         <button id="steam" class="orange">Steam Page</button>
     </section>
 
-    <!-- <iframe src="https://www.youtube-nocookie.com/embed/5vDHuSdOFOg?si=_cw_EkwesXZld2XP&controls=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
     <div id="player"></div>
-
-
 
     <script>
         const gun = document.getElementById('gun');
@@ -110,6 +107,10 @@
 
         steamButton.addEventListener('click', () => {
             window.open('https://store.steampowered.com/app/317400/Portal_Stories_Mel', '_blank');
+        });
+
+        gun.addEventListener('click', () => {
+            player.playVideo();
         });
     </script>
 
@@ -138,6 +139,7 @@
         function onPlayerReady(event) {
             event.target.playVideo();
         }
+
     </script>
 
 </body>
