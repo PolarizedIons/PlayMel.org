@@ -36,10 +36,20 @@
             align-items: center;
             gap: 2rem;
             position: fixed;
-            top: 0;
+            top: 3rem;
             right: 0;
             bottom: 0;
             left: 0;
+            flex-direction: column;
+        }
+        
+        section div {
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-direction: row;
+
         }
         
         button {
@@ -58,11 +68,17 @@
         .blue {
             background: #007bff;
             color: #fff;
+            margin-left: 2rem;
         }
 
         .orange {
             background: #fd7e14;
             color: #333;
+        }
+
+        .green {
+            background: #00FF00;
+            color: #444;
         }
 
         iframe {
@@ -79,12 +95,17 @@
 
 <body>
     <section>
-        <button id="play" class="blue">Play Now</button>
+        <div>
+            <button id="play" class="blue">Play Now</button>
 
-        <img id="gun" src="mel-gun-emote.png" alt="Quantum Tunneling Device">
+            <img id="gun" src="mel-gun-emote.png" alt="Quantum Tunneling Device">
 
-        <button id="steam" class="orange">Steam Page</button>
+            <button id="steam" class="orange">Steam Page</button>
+        </div>
+
+        <button id="tutorial" class="green">Tutorial</button>
     </section>
+    
 
     <div id="player"></div>
 
@@ -92,13 +113,21 @@
         const gun = document.getElementById('gun');
         const playButton = document.getElementById('play');
         const steamButton = document.getElementById('steam');
+        const tutorialButton = document.getElementById('tutorial');
 
         playButton.addEventListener('mouseover', () => {
             gun.style.transform = 'scaleX(1)';
+            gun.style.rotate = '0deg'
         });
 
         steamButton.addEventListener('mouseover', () => {
             gun.style.transform = 'scaleX(-1)';
+            gun.style.rotate = '0deg'
+        });
+
+        tutorialButton.addEventListener('mouseover', () => {
+            gun.style.transform = 'scaleX(1)';
+            gun.style.rotate = '250deg'
         });
 
         playButton.addEventListener('click', () => {
