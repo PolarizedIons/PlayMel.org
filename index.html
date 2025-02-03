@@ -4,15 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayMel.org</title>
-    <link rel="icon" href="play-mel-emote.png" type="image/png">
 
+    <!-- HTML Meta Tags -->
+    <title>PlayMel.org</title>
+    <meta name="description" content="Play Portal Stories: Mel now!">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://playmel.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PlayMel.org">
+    <meta property="og:description" content="Play Portal Stories: Mel now!">
+    <meta property="og:image" content="https://playmel.org/play-mel-high-res.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:domain" content="playmel.org">
+    <meta property="twitter:url" content="https://playmel.org/">
+    <meta name="twitter:title" content="PlayMel.org">
+    <meta name="twitter:description" content="Play Portal Stories: Mel now!">
+    <meta name="twitter:image" content="https://playmel.org/play-mel-high-res.png">
+
+    <meta name="theme-color" content="#fd7e14">
+
+    <link rel="icon" href="play-mel-emote.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -42,7 +62,7 @@
             left: 0;
             flex-direction: column;
         }
-        
+
         section div {
             z-index: 5;
             display: flex;
@@ -51,7 +71,7 @@
             flex-direction: row;
 
         }
-        
+
         button {
             padding: 1rem 2rem;
             border: none;
@@ -105,7 +125,7 @@
 
         <button id="tutorial" class="green">Tutorial</button>
     </section>
-    
+
 
     <div id="player"></div>
 
@@ -137,7 +157,7 @@
         steamButton.addEventListener('click', () => {
             window.open('https://store.steampowered.com/app/317400/Portal_Stories_Mel', '_blank');
         });
-        
+
         tutorialButton.addEventListener('click', () => {
             window.open('https://youtube.com/playlist?list=PLIGHJbDLEQ_DUXkgXb9AN7pcW9xQgoyMS', '_blank');
         });
